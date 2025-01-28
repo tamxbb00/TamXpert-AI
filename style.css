@@ -175,3 +175,21 @@ body{
         left: 15%;
     }
 }
+footer{
+   background-color: black;
+  padding: 15px 0;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+footer .text span{
+  font-size: 17px;
+  font-weight: 400;
+  color: black;
+}
+footer .text span a{
+  font-weight: 500;
+  color: black;
+}
+footer .text span a:hover{
+  text-decoration: underline;
+}
