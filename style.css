@@ -1,20 +1,23 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-
-body{
+body {
     width: 100%;
     height: 100vh;
     background: linear-gradient(to right, #ad05a5, #05128b); /* gradient colors */
     color: white; /* text color */
+    font-size: 1em; /* Default font size */
 }
-.chat-container{
+
+.chat-container {
     width: 100%;
     height: 80%;
+    max-width: 1200px; /* Limits the container's width */
+    margin: 0 auto; /* Centers the container */
     background: linear-gradient(to right, #ad05a5, #05128b); /* gradient colors */
     padding: 20px;
     display: flex;
@@ -24,16 +27,19 @@ body{
     overflow: auto;
     scroll-behavior: smooth; /* Smooth scrolling */
 }
-.user-chat-box{
+
+.user-chat-box {
     width: 60%;
     position: relative;
     left: 40%;
 }
-.ai-chat-box{
+
+.ai-chat-box {
     width: 60%;
     position: relative;
 }
-.user-chat-area{
+
+.user-chat-area {
     width: 90%;
     padding: 20px;
     background: linear-gradient(to right, #ad05a5, #05128b); /* gradient colors */
@@ -44,11 +50,13 @@ body{
     gap: 10px;
     flex-direction: column;
 }
-.chooseimg{
+
+.chooseimg {
     width: 30%;
     border-radius: 30px;
 }
-.ai-chat-area{
+
+.ai-chat-area {
     width: 90%;
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.361);
@@ -58,17 +66,20 @@ body{
     border-radius: 0px 40px 40px 40px;
     box-shadow: 2px 2px 10px black;
 }
-#userImage{
+
+#userImage {
     position: absolute;
     right: 0;
     filter: drop-shadow(2px 2px 10px black);
 }
-#aiImage{
+
+#aiImage {
     position: absolute;
     left: 0;
     filter: drop-shadow(2px 2px 10px black);
 }
-.prompt-area{
+
+.prompt-area {
     width: 100%;
     height: 20%;
     background: linear-gradient(to right, #ad05a5, #05128b); /* gradient colors */
@@ -77,7 +88,8 @@ body{
     justify-content: center;
     gap: 10px;
 }
-.prompt-area input{
+
+.prompt-area input {
     width: 50%;
     height: 80px;
     background-color: rgb(0, 0, 0);
@@ -89,7 +101,8 @@ body{
     font-size: 20px;
     box-shadow: 2px 2px 10px black;
 }
-.prompt-area button{
+
+.prompt-area button {
     width: 70px;
     height: 70px;
     border-radius: 50%;
@@ -99,18 +112,22 @@ body{
     cursor: pointer;
     transition: all 0.5s;
 }
-.prompt-area button:hover{
+
+.prompt-area button:hover {
     background-color: rgba(197, 14, 14, 0.767);
 }
-.load{
+
+.load {
     filter: drop-shadow(2px 2px 10px rgb(16, 1, 156));
 }
-.choose{
+
+.choose {
     width: 50px;
     height: 50px;
     border-radius: 50%;
 }
-#image{
+
+#image {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -128,8 +145,8 @@ body{
 
 ::-webkit-scrollbar-thumb {
     background: #888;
-     border-radius: 10px; /* Rounded corners for the thumb */ 
-     border: 2px solid #f1f1f1;
+    border-radius: 10px; /* Rounded corners for the thumb */
+    border: 2px solid #f1f1f1;
     transition: background 0.3s ease-in-out;
 }
 
@@ -160,36 +177,54 @@ body{
     animation: scrollbarAnimation 2s linear infinite;
 }
 
+/* Responsive Design for Mobile */
 @media (max-width: 600px) {
-    .user-chat-box{
-        width: 80%;
-        left: 20%;
+    .user-chat-box,
+    .ai-chat-box {
+        width: 90%;
+        margin: 0 auto;
     }
-    .ai-chat-box{
+
+    .prompt-area input {
         width: 80%;
+    }
+
+    .prompt-area button {
+        width: 60px;
+        height: 60px;
+    }
+
+    body {
+        font-size: 0.9em; /* Adjust font size for small screens */
     }
 }
+
 @media (max-width: 800px) {
-    .user-chat-box, .ai-chat-box {
-        width: 70%;
-        left: 15%;
+    .user-chat-box,
+    .ai-chat-box {
+        width: 85%;
+        margin: 0 auto;
     }
 }
-footer{
-   background-color: black;
-  padding: 15px 0;
-  text-align: center;
-  font-family: 'Poppins', sans-serif;
+
+footer {
+    background-color: black;
+    padding: 15px 0;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
 }
-footer .text span{
-  font-size: 17px;
-  font-weight: 400;
-  color: red;
+
+footer .text span {
+    font-size: 17px;
+    font-weight: 400;
+    color: red;
 }
-footer .text span a{
-  font-weight: 500;
-  color: red;
+
+footer .text span a {
+    font-weight: 500;
+    color: red;
 }
-footer .text span a:hover{
-  text-decoration: underline;
+
+footer .text span a:hover {
+    text-decoration: underline;
 }
